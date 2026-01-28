@@ -1,0 +1,19 @@
+<main>
+    <div class="content-container">
+        <div class="create-button">
+            <button class="btn-primary" routerLink="/CriarHeroi">Criar Novo Herói</button>
+        </div>
+        <div class="heroi-list">
+            @if($herois | async; as herois) {
+                @for (heroi of herois; track heroi.id) {
+                    <app-card-heroi class="card-heroi" [heroi]="heroi" (onDelete)="deletarHeroi($event)"></app-card-heroi>
+                }
+                @empty {
+                    <p>Nenhum herói cadastrado.</p>
+                }
+            } @else {
+                <p>Carregando heróis...</p>
+            }
+        </div>
+    </div>
+</main>

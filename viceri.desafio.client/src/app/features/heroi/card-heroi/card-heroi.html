@@ -1,0 +1,38 @@
+<div class="card-container">
+    <div class="header-container">
+        <p>{{ heroi.nomeHeroi }}</p>
+    </div>
+    <div class="body-container">
+        <div class="list-item">
+            <span class="label">Nome Real:</span>
+            <span class="value">{{ heroi.nome }}</span>
+        </div>
+        <div class="list-item">
+            <span class="label">Data de Nascimento:</span>
+            <span class="value">{{ heroi.dataNascimento | date: 'dd/MM/yyyy' }}</span>
+        </div>
+        <div class="list-item">
+            <span class="label">Altura (m):</span>
+            <span class="value">{{ heroi.altura }}</span>
+        </div>
+        <div class="list-item">
+            <span class="label">Peso (Kg):</span>
+            <span class="value">{{ heroi.peso }}</span>
+        </div> 
+        <div class="powers-list">
+            <span class="label">Poderes:</span>
+            <ul>
+                @for (poder of heroi.superpoderes; track $index) {
+                    <li>
+                        {{ poder.nome }}
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+    <div class="footer-container">
+        <button class="btn-edit" (click)="goToEditPage(heroi.id)">Editar</button>
+        <button class="btn-view" (click)="goToViewPage(heroi.id)">Ver</button>
+        <button class="btn-delete" (click)="excluirHeroi(heroi.id)">Excluir</button>
+    </div>
+</div> 

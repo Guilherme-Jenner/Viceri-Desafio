@@ -1,0 +1,84 @@
+.pop-up-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Backdrop */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.title, .message, .buttons {
+    background: white;
+    width: 400px;
+    padding: 0 1.5rem;
+}
+
+.title {
+    border-radius: 12px 12px 0 0;
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.title h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #1e293b;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.message {
+    padding-bottom: 1.5rem;
+}
+
+.message p {
+    margin: 0;
+    font-size: 1rem;
+    color: #475569;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding-bottom: 1.5rem;
+    border-radius: 0 0 12px 12px;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-cancel {
+    background: transparent;
+    color: #475569;
+    border: 1px solid #cbd5e1;
+}
+
+.btn-cancel:hover {
+    background: #f1f5f9;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: white;
+    border: 1px solid var(--primary-color);
+}
+
+.btn-primary:hover {
+    filter: brightness(1.1);
+}

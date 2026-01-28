@@ -1,0 +1,12 @@
+<app-header></app-header>
+<router-outlet></router-outlet>
+@if(isToastVisible()) {
+    <app-toast [message]="toastOptions()?.message!" [type]="toastOptions()?.type!"></app-toast>
+}
+
+@if(confirmationState()) {
+    <app-popup-confirmation 
+        [title]="confirmationState()!.title" 
+        [message]="confirmationState()!.message">
+    </app-popup-confirmation>
+}

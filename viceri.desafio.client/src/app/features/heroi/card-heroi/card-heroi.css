@@ -1,0 +1,165 @@
+.card-container {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  height: 100%; /* Ensure full height in grid */
+}
+
+/* Branding Stripe on Hover or Static */
+.card-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  opacity: 0.8;
+  transition: height 0.3s ease, opacity 0.3s ease;
+}
+
+.card-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.card-container:hover::before {
+  height: 6px;
+  opacity: 1;
+}
+
+.header-container {
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.header-container p {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #1e293b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.body-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex-grow: 1; /* Pushes footer down */
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px dashed #f1f5f9;
+  padding-bottom: 0.25rem;
+}
+
+.list-item:last-child {
+  border-bottom: none;
+}
+
+.label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #64748b;
+  letter-spacing: 0.5px;
+}
+
+.value {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.95rem;
+  color: #334155;
+  font-weight: 500;
+}
+
+.powers-list {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.powers-list ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.powers-list li {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.8rem;
+  background: #f1f5f9;
+  color: #475569;
+  padding: 0.25rem 0.75rem;
+  border-radius: 99px; /* Pill shape */
+  border: 1px solid #e2e8f0;
+}
+
+.footer-container {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #f1f5f9;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+.footer-container button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.footer-container .btn-edit {
+  background: transparent;
+  color: var(--secondary-color);
+  border: 1px solid currentColor;
+}
+
+.footer-container .btn-edit:hover {
+  background: aliceblue;
+}
+
+.footer-container .btn-view {
+  background: transparent;
+  color: #475569; /* Slate 600 */
+  border: 1px solid currentColor;
+}
+
+.footer-container .btn-view:hover {
+  background: #f1f5f9; /* Slate 100 */
+}
+
+.footer-container .btn-delete {
+  background: transparent;
+  color: #ef4444; /* Red 500 */
+  border: 1px solid currentColor;
+}
+
+.footer-container .btn-delete:hover {
+  background: #fef2f2; /* Red 50 */
+}

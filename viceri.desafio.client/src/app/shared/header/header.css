@@ -1,0 +1,11 @@
+header {
+    display: flex;
+    background-color: var(--secondary-color);
+    height: 10vh;
+    align-items: center;
+}
+
+h1 {
+    margin-left: 1rem;
+    color: white;
+}
