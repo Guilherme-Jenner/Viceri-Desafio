@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\viceri.desafio.server.Application\viceri.desafio.server.Application.csproj" />
+    <ProjectReference Include="..\viceri.desafio.server.Infrastructure\viceri.desafio.server.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

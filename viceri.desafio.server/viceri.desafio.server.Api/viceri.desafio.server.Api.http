@@ -1,0 +1,6 @@
+@viceri.desafio.server.Api_HostAddress = http://localhost:5231
+
+GET {{viceri.desafio.server.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
