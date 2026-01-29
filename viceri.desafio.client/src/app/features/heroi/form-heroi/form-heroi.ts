@@ -181,7 +181,8 @@ export class FormHeroi implements OnInit{
         },
         error: (err) => {
           console.error('Erro ao criar herói:', err);
-          this.globalService.showToast({message: 'Erro ao criar herói. Tente novamente.', type: 'error'});
+          const message = err.error ? err.error : 'Erro ao criar herói. Tente novamente.';
+          this.globalService.showToast({message: message, type: 'error'});
         }
       }
     );
@@ -198,7 +199,7 @@ export class FormHeroi implements OnInit{
         },  
         error: (err) => {
           console.error('Erro ao atualizar herói:', err);
-          const message = err.error ? err.error : 'Erro ao carregar herói. Tente novamente.';
+          const message = err.error ? err.error : 'Erro ao atualizar herói. Tente novamente.';
           this.globalService.showToast({message: message, type: 'error'});
         }
       }

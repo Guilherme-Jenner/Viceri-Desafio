@@ -1,10 +1,10 @@
 import { Component, OnInit, Signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Header } from "./shared/header/header";
-import { Toast } from "./shared/toast/toast";
-import { IToastOptions } from './shared/toast/models/toast-options.model';
 import { IConfirmationOptions, GlobalService } from './shared/services/global.service';
 import { PopupConfirmation } from './shared/components/popup-confirmation/popup-confirmation';
+import { Header } from './shared/components/header/header';
+import { Toast } from './shared/components/toast/toast';
+import { IToastOptions } from './shared/components/toast/models/toast-options.model';
 
 @Component({
   selector: 'app-root',

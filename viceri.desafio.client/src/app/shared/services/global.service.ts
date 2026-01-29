@@ -1,5 +1,5 @@
 import { Injectable, signal } from '@angular/core';
-import { IToastOptions } from '../toast/models/toast-options.model';
+import { IToastOptions } from '../components/toast/models/toast-options.model';
 
 export interface IConfirmationOptions {
   title: string;

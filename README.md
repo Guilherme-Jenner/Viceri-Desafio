@@ -12,11 +12,15 @@ Utilizou-se **Clean Architecture** para a estruturação do servidor.
 ### Front-end
 A aplicação cliente segue uma **Arquitetura baseada em Features**.
 - **Organização Modular**: Fiz a estrutura desta forma pensando em facilitar a manutenção e a adição de novas funcionalidades, isolando cada feature do sistema.
-- **Reutilização de Componentes**: Mesmo componente **form-heroi** utilizado para o Update, Criação e Consulta
+- **Reutilização de Componentes**: 
+  - Mesmo componente **form-heroi** utilizado para o Update, Criação e Consulta
+  - Componentes genéricos feitos para servirem para todo o sistema, podendo ser reutilizados em usos diversos (**toast**, **popup-confirmation**)
 - **Gerenciamento de Estado com Signals**: O controle de estado global é realizado através de Signals.
   - **Benefícios dos utilizacao de Signals**:
     - **Reatividade Fina**: Otimiza a performance ao atualizar apenas os componentes que dependem diretamente do estado alterado.
     - **Código Mais Limpo**: Reduz a complexidade e o código boilerplate, tornando o controle de estado mais intuitivo e legível.
+- **Uso de Promises para Confirmação**:
+  - **Fluxo Linear**: A escolha de utilizar **Promise** para o retorno do **popup-confirmation** simplifica o código dos componentes. Permite aguardar a resposta do usuário diretamente (**await**), eliminando a necessidade de gerenciar **Outputs** ou observáveis para janelas de diálogo globais.
 
 ### Scripts
 Scripts se encontram em: \Viceri.Desafio\viceri.desafio.server\Database
